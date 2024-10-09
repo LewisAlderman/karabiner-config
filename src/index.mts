@@ -1,11 +1,4 @@
-import {
-  layer,
-  map,
-  NumberKeyValue,
-  rule,
-  withMapper,
-  writeToProfile,
-} from 'karabiner.ts'
+import { map, rule, writeToProfile } from 'karabiner.ts';
 
 // ! Change '--dry-run' to your Karabiner-Elements Profile name.
 // (--dry-run print the config json into console)
@@ -16,9 +9,8 @@ writeToProfile('--dry-run', [
   // to make it easier to write '←' instead of 'left_arrow'.
   // Supported alias: https://github.com/evan-liu/karabiner.ts/blob/main/src/utils/key-alias.ts
 
-
   rule('Key mapping').manipulators([
     // config key mappings
-    map(1).to(1)
+    map(1).to(1),
   ]),
-])
+]);
