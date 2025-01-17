@@ -13,13 +13,9 @@ writeToProfile(
 
     rule('Key mapping').manipulators([
       // config key mappings
-      map('caps_lock')
-        .toIfAlone({
-          key_code: 'escape',
-        })
-        .toIfHeldDown({
-          key_code: 'left_control',
-        }),
+      map('caps_lock', null, ['shift', 'control', 'option', 'command'])
+        .toIfAlone('escape')
+        .toIfHeldDown('left_control'),
       map('locking_scroll_lock').to('caps_lock'),
       map('scroll_lock').to('play_or_pause'),
     ]),
@@ -76,6 +72,6 @@ writeToProfile(
     // ).manipulators([map('f').to('f'), map('q').to('left_arrow')]),
   ],
   {
-    'basic.to_if_held_down_threshold_milliseconds': 150,
+    'basic.to_if_held_down_threshold_milliseconds': 120,
   }
 );
