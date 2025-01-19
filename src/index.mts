@@ -72,6 +72,6 @@ writeToProfile(
     // ).manipulators([map('f').to('f'), map('q').to('left_arrow')]),
   ],
   {
-    'basic.to_if_held_down_threshold_milliseconds': 175,
+    'basic.to_if_held_down_threshold_milliseconds': 125,
   }
 );
